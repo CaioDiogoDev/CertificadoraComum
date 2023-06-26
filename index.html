@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Conhecendo banco de dados</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Introdução a banco de dados!</h1>
+        <h2>Oque é um banco de dados ?</h2>
+        <p>Um banco de dados é um sistema organizado de armazenamento e recuperação de informações. Ele permite armazenar, gerenciar e recuperar dados de forma eficiente.</p>
+        <h2>Oque é SGBD ?</h2>
+        <p> É um software responsável por gerenciar e controlar o acesso ao banco de dados. Ele fornece uma interface para interagir com o banco de dados, permite a criação, recuperação, atualização e exclusão de dados, além de garantir a integridade, segurança
+            e desempenho do sistema.</p>
+        <h2>SQL (Structured Query Language)</h2>
+        <p>É uma linguagem de consulta estruturada utilizada para manipular e consultar bancos de dados relacionais. O SQL permite realizar operações como seleção, inserção, atualização e exclusão de dados, além de definir a estrutura do banco de dados,
+            como tabelas, índices e restrições.</p>
+        <h2>Tabelas e Relacionamentos</h2>
+        <p> As tabelas são estruturas fundamentais de armazenamento de dados em um banco de dados relacional. Elas consistem em linhas (registros) e colunas (campos). Os relacionamentos são estabelecidos entre tabelas usando chaves primárias e chaves estrangeiras
+            para representar a associação entre os dados.</p>
+        <h2>Normalização</h2>
+        <p> É o processo de projetar uma estrutura de banco de dados relacional para eliminar redundâncias e anomalias, garantindo a integridade dos dados e a eficiência das consultas. A normalização ajuda a otimizar a estrutura do banco de dados e evitar
+            inconsistências
+        </p>
+        <h2>Índices</h2>
+        <p>São estruturas auxiliares usadas para acelerar a recuperação de dados em um banco de dados. Eles melhoram o desempenho das consultas ao permitir que o sistema localize rapidamente os registros com base nos valores de colunas indexadas</p>
+
+        <h2>Principais Comandos SQL</h2>
+        <ul>
+            <li>
+                <h3>SELECT</h3>
+                <p>O comando SELECT é usado para recuperar dados de uma tabela ou visualização em um banco de dados.</p>
+                <span>Exemplo de sintaxe: SELECT * FROM "nome da tabela". </span>
+                <span>Este exemplo traz todos os campos da tabela, para consultar somente colunas desejadas inves de usar * insira o nome das colunas. Não se esqueça a separação é feita por virgula.</span>
+                <p>Exemplo do comando</p>
+                <img src="imagens/select.png" alt="select">
+
+            </li>
+            <li>
+                <h3>INSERT</h3>
+                <p>O comando INSERT é usado para adicionar novos registros a uma tabela em um banco de dados.</p>
+                <span>Exemplo de sintaxe: INSERT INTO "nome da tabela" (colunas que desejadas) VALUES (valores que deseja inserir na ordem das colunas colocas)</span>
+                <p>Exemplo do comando</p>
+                <img src="imagens/Insert.png" alt="Insert">
+            </li>
+            <li>
+                <h3>DELETE</h3>
+                <p>O comando DELETE é usado para remover registros de uma tabela em um banco de dados. Aviso muito cuidado ao fazer delete, sempre atribuir a sua query a clausula WHERE.</p>
+                <span>Exemplo de sintaxe: DELETE FROM "nome da tabela" WHERE  "condicao_de_busca";</span>
+                <p>Exemplo do comando, observação, realizei o delete do primeiro registro "NIKE"</p>
+                <img src="imagens/delete.png" alt="delete">
+            </li>
+            <li>
+                <h3>UPDATE</h3>
+                <p>O comando UPDATE é usado para modificar os valores de um ou mais campos em registros existentes de uma tabela em um banco de dados.</p>
+                <span>Exemplo de sintaxe: UPDATE "nome tabela" SET "nome coluna" = 'valor para o campo' WHERE  id = 2.</span>
+                <span>Exemplo do comando, obser que alterei a marca do registro com id = 2 para NIKE!</span>
+                <img src="imagens/update.png" alt="update">
+            </li>
+            <li>
+                <h3>JOIN</h3>
+                <ul>
+                    <li>
+                        <h4>INNER JOIN</h4>
+                        <p>O INNER JOIN é usado para combinar registros de duas ou mais tabelas com base em uma condição de igualdade, retornando apenas os registros que possuem correspondências em ambas as tabelas.</p>
+                    </li>
+                    <li>
+                        <h4>LEFT JOIN</h4>
+                        <p>O LEFT JOIN é usado para combinar todos os registros da tabela da esquerda com os registros correspondentes da tabela da direita, com base em uma condição de igualdade. Ele também retorna os registros da tabela da esquerda que
+                            não possuem correspondências na tabela da direita.</p>
+                    </li>
+                    <li>
+                        <h4>RIGHT JOIN</h4>
+                        <p>O RIGHT JOIN é usado para combinar todos os registros da tabela da direita com os registros correspondentes da tabela da esquerda, com base em uma condição de igualdade. Ele também retorna os registros da tabela da direita que
+                            não possuem correspondências na tabela da esquerda.</p>
+                    </li>
+                    <li>
+                        <h4>FULL JOIN</h4>
+                        <p>O FULL JOIN é usado para combinar todos os registros de ambas as tabelas, independentemente de haver correspondência ou não. Ele retorna todos os registros da tabela da esquerda e da tabela da direita.</p>
+                    </li>
+                </ul>
+                <img src="imagens/joins.png" alt="join">
+            </li>
+        </ul>
+    </div>
+
+    <h1>Teste de conhecimento!</h1>
+    <h5>Ao final das perguntas o resultado sera exibido automaticamente.</h5>
+
+    <div id="content">
+        <p id="question"></p>
+        <input type="text" id="answer">
+        <button onclick="checkAnswer()">Verificar</button>
+        <p id="result"></p>
+    </div>
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>
