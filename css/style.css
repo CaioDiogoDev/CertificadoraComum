@@ -50,3 +50,8 @@ button {
     font-weight: bold;
     margin-top: 10px;
 }
+
+.slide {
+    text-align: center;
+    font-size: smaller;
+}
